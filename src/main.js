@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-
-// Vue.config.productionTip = false
+// 引入路由，router单词要小写！！！
+import router from '@/router'
 
 new Vue({
   render: h => h(App),
+  // 注册路由
+  router
 }).$mount('#app')
