@@ -8,6 +8,18 @@ import Home from '@/pages/Home'
 import Search from '@/pages/Search'
 import Login from '@/pages/Login'
 import Register from '@/pages/Register'
+import VueRouter from 'vue-router';
+
+let originPush = VueRouter.prototype.push;
+
+VueRouter.prototype.push = function(location, resolve, reject) {
+    if(resolve && reject) {
+        originPush.call(this, location, resolve, reject);
+    } else {
+        originPush.call(this, location, ()=>{}, ()=>{});
+    }
+}
+
 //配置路由
 export default new VueRoute({
     //配置路由
