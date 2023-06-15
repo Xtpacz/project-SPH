@@ -8,7 +8,7 @@
                         <div class="swiper-slide">
                             <img src="./images/banner1.jpg" />
                         </div>
-                        <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                             <img src="./images/banner2.jpg" />
                         </div>
                         <div class="swiper-slide">
@@ -16,7 +16,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="./images/banner4.jpg" />
-                        </div>
+                        </div> -->
                     </div>
                     <!-- 如果需要分页器 -->
                     <div class="swiper-pagination"></div>
@@ -186,7 +186,7 @@ export default {
                         width: 25%;
 
                         .list-item {
-                            background-image: url(../images/icons.png);
+                            background-image: url(./images/icons.png);
                             width: 61px;
                             height: 40px;
                             display: block;
