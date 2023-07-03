@@ -18,6 +18,7 @@ import Rank from '@/pages/Home/Rank';
 import Like from '@/pages/Home/Like';
 import Floor from '@/pages/Home/Floor';
 import Brand from '@/pages/Home/Brand';
+import { mapState, add } from 'vuex';
 export default {
   name: '',
   components:{
@@ -27,6 +28,9 @@ export default {
     Like,
     Floor,
     Brand
+  },
+  computed:{
+    ...mapState(['count'])
   }
 }
 </script>
@@ -34,3 +38,7 @@ export default {
 <style>
 
 </style>
+
+
+
+<!-- vue视频P19 -->

@@ -30,7 +30,7 @@ export default new VueRoute({
             meta:{show:true}
         },
         {
-            path:"/search/:keyword",
+            path:"/search/:keyword?",
             component:Search,
             meta:{show:true},
             name:"search"
