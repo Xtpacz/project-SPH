@@ -6,10 +6,10 @@
                 <h2 class="all">全部商品分类</h2>
                 <!-- 三级联动 -->
                 <div class="sort" >
-                    <div class="all-sort-list2">
+                    <div class="all-sort-list2" @click="goSearch">
                         <div class="item" v-for="(c1, index) in categoryList" :key="c1.categoryId" :class="{cur:currentIndex == index}">
                             <h3 @mouseenter="changeIndex(index)">
-                                <a @click="goSearch">{{c1.categoryName}}</a>
+                                <a>{{c1.categoryName}}</a>
                                 <!-- <router-link to="/search">{{c1.categoryName}}</router-link> -->
                             </h3>
                             <!-- 二级、三级分类 -->
@@ -17,12 +17,12 @@
                                 <div class="subitem" v-for="(c2, index) in c1.categoryChild" :key="c2.categoryId">
                                     <dl class="fore">
                                         <dt>
-                                            <a @click="goSearch">{{c2.categoryName}}</a>
+                                            <a>{{c2.categoryName}}</a>
                                             <!-- <router-link to="/search">{{c2.categoryName}}</router-link> -->
                                         </dt>
                                         <dd>
                                             <em v-for="(c3, index) in c2.categoryChild" :key="c3.categoryId">
-                                                <a @click="goSearch">{{c3.categoryName}}</a>
+                                                <a>{{c3.categoryName}}</a>
                                                 <!-- <router-link to="/search">{{c3.categoryName}}</router-link> -->
                                             </em>
                                             
@@ -82,7 +82,7 @@ export default {
             this.currentIndex = -1
         },
         goSearch(){
-            
+            this.$router.push('/search')
         }
     }
 }
