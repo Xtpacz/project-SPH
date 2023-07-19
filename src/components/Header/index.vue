@@ -41,7 +41,7 @@
                         v-model="keyword"
                     />
                     <button class="sui-btn btn-xlarge btn-danger" type="button" @click="goSearch">
-                        搜索
+                        Search
                     </button>
                 </form>
             </div>
@@ -68,11 +68,20 @@ export default {
             // this.$router.push('/search/${this.keyword}?k=${this.keyword.toUpperCase()}')
 
             // 3. 对象
-            let res = this.$router.push({name:"search", params:{keyword:this.keyword}, query:{k:this.keyword.toUpperCase()}},()=>{},(error)=>{console.log(error)})
-            console.log(res)
+            // let res = this.$router.push({name:"search", params:{keyword:this.keyword}, query:{k:this.keyword.toUpperCase()}},()=>{},(error)=>{console.log(error)})
+            // console.log(res)
+
+            // 如果有query参数，，也带过去
+            let locations = { 
+                name: "search",
+                params: {keyword: this.keyword || undefined} 
+            };
+            if (this.$route.query){
+                locations.query = this.$route.query
+            }
+            this.$router.push(locations)
         }
     }
-
 }
 </script>
 
