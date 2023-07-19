@@ -4,10 +4,10 @@ import VueRoute from 'vue-router';
 Vue.use(VueRoute);
 
 //引入路由组件
-import Home from '@/pages/Home'
-import Search from '@/pages/Search'
-import Login from '@/pages/Login'
-import Register from '@/pages/Register'
+import Home from '@/views/Home'
+import Search from '@/views/Search'
+import Login from '@/views/Login'
+import Register from '@/views/Register'
 import VueRouter from 'vue-router';
 
 let originPush = VueRouter.prototype.push;
